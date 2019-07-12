@@ -6,7 +6,6 @@ def main():
     setup(field)
     while count > 0:
         view()
-        print("a")
         
 def check(field_view,color_1,color_2,i,j,field):
     field[i][j] = 2
@@ -21,7 +20,6 @@ def check(field_view,color_1,color_2,i,j,field):
     color_2[i][j] = 255
     return (field_view,color_1,color_2,i,j,field)
             
-    
 def setup(field):
     pygame.init()
     screen = pygame.display.set_mode((490,490))
@@ -50,8 +48,6 @@ def view(color_1,color_2,screen,field_view,field,flag,text,text1):
         pygame.display.flip()
         screen.fill((255,255,255))
 
-
-            
         for i in range(8):
             for j in range(8):
                 field_view[i][j] = pygame.draw.rect(screen,(color_1[i][j],color_2[i][j],0),(10+i*60,10+j*60,50,50))
